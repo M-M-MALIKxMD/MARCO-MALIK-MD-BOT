@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marco Malik Live - Bot Panel</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ── Animated Background Particles ───────────────────────────────────── -->
+  <div class="particles" id="particles"></div>
+
+  <!-- ── Top Glow Line ─────────────────────────────────────────────────── -->
+  <div class="glow-line"></div>
+
+  <!-- ── HEADER ────────────────────────────────────────────────────────── -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo-wrap">
+        <div class="logo-ring"></div>
+        <div class="logo-icon"><i class="fa-brands fa-whatsapp"></i></div>
+      </div>
+      <div class="header-text">
+        <h1 class="brand-title">Marco Malik <span class="live-badge"><span class="live-dot"></span>LIVE</span></h1>
+        <p class="brand-sub">Professional WhatsApp MD Bot Panel</p>
+      </div>
+      <div class="header-status">
+        <div class="status-chip online" id="statusChip">
+          <span class="status-pulse"></span>
+          <span id="statusText">ONLINE</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── MARQUEE TICKER ────────────────────────────────────────────────── -->
+  <div class="ticker-wrap">
+    <div class="ticker">
+      <span>🔱 Marco Malik Bot V12 &nbsp;|&nbsp; 600+ Commands &nbsp;|&nbsp; AI Powered &nbsp;|&nbsp; 24/7 Online &nbsp;|&nbsp; Professional Setup &nbsp;|&nbsp; Deploy Ready &nbsp;|&nbsp; Powered By Marco Malik &nbsp;|&nbsp; 🔱 Marco Malik Bot V12 &nbsp;|&nbsp; 600+ Commands &nbsp;|&nbsp; AI Powered &nbsp;|&nbsp; 24/7 Online</span>
+    </div>
+  </div>
+
+  <!-- ── STATS ROW ──────────────────────────────────────────────────────── -->
+  <section class="stats-section">
+    <div class="stat-card">
+      <div class="stat-icon"><i class="fas fa-robot"></i></div>
+      <div class="stat-value" id="statBot">Marco Malik Bot</div>
+      <div class="stat-label">Bot Name</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon"><i class="fas fa-terminal"></i></div>
+      <div class="stat-value">600+</div>
+      <div class="stat-label">Commands</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon"><i class="fas fa-clock"></i></div>
+      <div class="stat-value" id="statUptime">0s</div>
+      <div class="stat-label">Uptime</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon"><i class="fas fa-memory"></i></div>
+      <div class="stat-value" id="statMem">-- MB</div>
+      <div class="stat-label">Memory</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon"><i class="fas fa-tag"></i></div>
+      <div class="stat-value" id="statVersion">12.0.0</div>
+      <div class="stat-label">Version</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon"><i class="fas fa-crown"></i></div>
+      <div class="stat-value" id="statOwner">Marco Malik</div>
+      <div class="stat-label">Owner</div>
+    </div>
+  </section>
+
+  <!-- ── LIVE BANNER ────────────────────────────────────────────────────── -->
+  <section class="live-banner">
+    <div class="live-banner-inner">
+      <div class="live-text-wrap">
+        <p class="live-label">LIVE SESSION</p>
+        <h2 class="live-heading">Marco Malik <span class="text-gold">Live</span></h2>
+        <p class="live-desc">Your bot is running live and ready to serve. Deploy it now to keep it online 24/7.</p>
+      </div>
+      <div class="live-animation">
+        <div class="pulse-ring r1"></div>
+        <div class="pulse-ring r2"></div>
+        <div class="pulse-ring r3"></div>
+        <div class="center-orb"><i class="fa-brands fa-whatsapp"></i></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── BUTTONS ─────────────────────────────────────────────────────────── -->
+  <section class="buttons-section">
+    <h3 class="section-title">⚡ Quick Actions</h3>
+    <div class="buttons-grid">
+      <a id="btnSession" href="#session-modal" class="action-btn btn-gold" onclick="openSession()">
+        <i class="fas fa-key"></i>
+        <span>Get Session ID</span>
+        <div class="btn-glow"></div>
+      </a>
+
+      <a id="btnChannel" href="#" class="action-btn btn-green" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span>Join Channel</span>
+        <div class="btn-glow"></div>
+      </a>
+
+      <a href="https://railway.app" class="action-btn btn-purple" target="_blank">
+        <i class="fas fa-train"></i>
+        <span>Deploy Railway</span>
+        <div class="btn-glow"></div>
+      </a>
+
+      <a href="https://render.com" class="action-btn btn-blue" target="_blank">
+        <i class="fas fa-cloud-upload-alt"></i>
+        <span>Deploy Render</span>
+        <div class="btn-glow"></div>
+      </a>
+
+      <a href="https://heroku.com" class="action-btn btn-indigo" target="_blank">
+        <i class="fab fa-heroku"></i>
+        <span>Deploy Heroku</span>
+        <div class="btn-glow"></div>
+      </a>
+
+      <a id="btnContact" href="#" class="action-btn btn-red" target="_blank">
+        <i class="fas fa-envelope"></i>
+        <span>Contact Owner</span>
+        <div class="btn-glow"></div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ── FEATURES GRID ─────────────────────────────────────────────────── -->
+  <section class="features-section">
+    <h3 class="section-title">🌟 Bot Features</h3>
+    <div class="features-grid">
+      <div class="feature-card">
+        <i class="fas fa-robot feature-icon"></i>
+        <h4>AI Commands</h4>
+        <p>GPT-4, Gemini, Image Generation, OCR, Translation & more</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-download feature-icon"></i>
+        <h4>Downloaders</h4>
+        <p>YouTube, TikTok, Instagram, Facebook, Twitter, Spotify & APK</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-users feature-icon"></i>
+        <h4>Group Tools</h4>
+        <p>Anti-link, anti-spam, welcome, tag all, warn system & more</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-gamepad feature-icon"></i>
+        <h4>Games & Economy</h4>
+        <p>Blackjack, slots, RPG, XP system, daily rewards & leaderboard</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-tools feature-icon"></i>
+        <h4>Tech Tools</h4>
+        <p>HTML to website, source viewer, IP lookup, QR codes & more</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-image feature-icon"></i>
+        <h4>Media Effects</h4>
+        <p>Sticker maker, blur, grayscale, sepia, watermark, crop & more</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SESSION MODAL ──────────────────────────────────────────────────── -->
+  <div class="modal-overlay" id="sessionModal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeSession()">✕</button>
+      <h2 class="modal-title"><i class="fas fa-key"></i> Get Session ID</h2>
+      <p class="modal-desc">To use this bot, you need to generate a Session ID. Follow these steps:</p>
+      <div class="steps">
+        <div class="step"><span class="step-num">1</span><p>Install dependencies: <code>npm install</code></p></div>
+        <div class="step"><span class="step-num">2</span><p>Run: <code>node index.js</code></p></div>
+        <div class="step"><span class="step-num">3</span><p>Scan the QR code with WhatsApp</p></div>
+        <div class="step"><span class="step-num">4</span><p>Copy your session files from the <code>/session</code> folder</p></div>
+        <div class="step"><span class="step-num">5</span><p>Set <code>SESSION_ID</code> in your <code>.env</code> file</p></div>
+      </div>
+      <div class="modal-footer">
+        <p>Need help? Contact: <strong id="modalOwnerNum"></strong></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── FOOTER ─────────────────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="footer-brand">🔱 <strong id="footerPowered">Powered By Marco Malik</strong></p>
+      <div class="footer-links">
+        <a id="footerChannel" href="#" target="_blank"><i class="fa-brands fa-whatsapp"></i> Channel</a>
+        <a id="footerContact" href="#" target="_blank"><i class="fas fa-comment"></i> Contact</a>
+      </div>
+      <p class="footer-copy">© 2025 Marco Malik Bot v12.0.0 — All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
