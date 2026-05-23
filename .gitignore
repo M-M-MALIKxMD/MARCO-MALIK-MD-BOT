@@ -1,0 +1,41 @@
+# Dependencies
+node_modules/
+
+# Environment
+.env
+
+# Session files (sensitive - contains auth tokens)
+session/
+session.json
+
+# Temp files
+tmp/
+*.tmp
+
+# Database
+data/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Build
+dist/
+build/
+
+# Heroku
+.heroku/
+
+# Puppeteer cache
+.cache/puppeteer/

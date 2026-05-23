@@ -1,0 +1,50 @@
+# ============================================
+#   MARCO MALIK BOT - RENDER DEPLOY CONFIG
+# ============================================
+
+services:
+  - type: web
+    name: marco-malik-bot
+    env: node
+    region: singapore
+    plan: free
+    buildCommand: npm install
+    startCommand: node index.js
+    healthCheckPath: /
+    autoDeploy: true
+
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
+      - key: SESSION_ID
+        sync: false
+      - key: OWNER_NAME
+        value: Marco Malik
+      - key: OWNER_NUMBER
+        sync: false
+      - key: BOT_NAME
+        value: Marco Malik Bot
+      - key: BOT_VERSION
+        value: "12.0.0"
+      - key: PREFIX
+        value: "."
+      - key: POWERED_BY
+        value: Marco Malik
+      - key: CHANNEL_LINK
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: BOT_MODE
+        value: public
+      - key: AUTO_READ
+        value: "false"
+      - key: AUTO_TYPING
+        value: "true"
+      - key: ANTI_SPAM
+        value: "true"
+      - key: TZ
+        value: Asia/Karachi
